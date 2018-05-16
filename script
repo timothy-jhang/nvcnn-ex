@@ -1,0 +1,8 @@
+#!/bin/bash
+set -x
+#python nvcnn.py --model=resnet50 --data_dir=./out --batch_size=32 --num_gpus=2  
+for f in 0 1 2 3 4
+do
+python nvcnn.py --model=googlenet --data_dir=./out$f --batch_size=32 --num_gpus=2 --num_epochs=150 --display_every=50  --log_dir=./log{$f}_dir 
+python nvcnn.py --eval --model=googlenet  --data_dir=./out$f  --batch_size=256  --log_dir=./log{$f}_dir  >& eval_out_$f
+done
