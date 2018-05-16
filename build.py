@@ -77,9 +77,9 @@ import threading
 import numpy as np
 import tensorflow as tf
 
-tf.app.flags.DEFINE_string('train_directory', '../../data/fold4/age_train/',
+tf.app.flags.DEFINE_string('train_directory', '../../data/fold4/gender_train/',
                            'Training data directory')
-tf.app.flags.DEFINE_string('validation_directory', '../../data/fold4/age_test/',
+tf.app.flags.DEFINE_string('validation_directory', '../../data/fold4/gener_test/',
                            'Validation data directory')
 tf.app.flags.DEFINE_string('output_directory', './out4/',
                            'Output data directory')
